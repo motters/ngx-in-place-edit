@@ -1,0 +1,28 @@
+{
+  "name": "ngx-in-place-edit",
+  "version": "2.2.1",
+  "description": "A flexible and unopinionated edit in place library for Angular applications",
+  "peerDependencies": {
+    "@angular/common": "*",
+    "@angular/core": "*"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "keywords": [
+    "angular",
+    "angular reactive forms",
+    "reactive forms",
+    "edit-in-place",
+    "edit on click"
+  ],
+  "license": "MIT",
+  "main": "bundles/ngx-in-place-edit.umd.js",
+  "module": "fesm2015/ngx-in-place-edit.js",
+  "es2015": "fesm2015/ngx-in-place-edit.js",
+  "esm2015": "esm2015/ngx-in-place-edit.js",
+  "fesm2015": "fesm2015/ngx-in-place-edit.js",
+  "typings": "ngx-in-place-edit.d.ts",
+  "metadata": "ngx-in-place-edit.metadata.json",
+  "sideEffects": false
+}

@@ -1,0 +1,33 @@
+import { ElementRef, EventEmitter, OnDestroy, OnInit } from '@angular/core';
+import { Observable, Subscription } from 'rxjs';
+import { ViewModeDirective } from '../directives/view-mode.directive';
+import { EditModeDirective } from '../directives/edit-mode.directive';
+import { EditableConfig } from './editable.config';
+import { Mode } from './mode';
+export declare class EditableComponent implements OnInit, OnDestroy {
+    private readonly el;
+    readonly config: EditableConfig;
+    openOn: import("./editable.types").TriggerEvents;
+    closeOn: import("./editable.types").TriggerEvents;
+    save: EventEmitter<void>;
+    cancel: EventEmitter<void>;
+    onStateChange: EventEmitter<Mode>;
+    viewModeTpl: ViewModeDirective;
+    editModeTpl: EditModeDirective;
+    private readonly editMode;
+    readonly editMode$: Observable<boolean>;
+    viewHandler: Subscription;
+    editHandler: Subscription;
+    private destroy$;
+    isGrouped: boolean;
+    constructor(el: ElementRef, config: EditableConfig);
+    private get element();
+    ngOnInit(): void;
+    ngOnDestroy(): void;
+    private handleViewMode;
+    private handleEditMode;
+    displayEditMode(): void;
+    saveEdit(): void;
+    cancelEdit(): void;
+    private leaveEditMode;
+}
